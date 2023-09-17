@@ -26,12 +26,14 @@
     flex-direction: row;
 }
 #contenedor-goals #metas {
-    padding-left: 11.2cm;
-    padding-right: 11.2cm;
+    background-color: red;
+    height: auto;
+    width: auto;
 
 }
 
 #contenedor-goals #opciones{
+    background-color: yellow;
     padding-left: 1cm;
     padding-right: 1cm;
 
