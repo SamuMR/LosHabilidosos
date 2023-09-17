@@ -40,11 +40,24 @@
     justify-content: space-around;
 }
 
+.texto-con-iconos p{
+    outline: none;
+    border: none;
+
+}
+
+.texto-con-iconos p {
+    word-wrap: break-word;
+    word-break: break-all;
+
+    padding-right:16px ;
+    padding-left: 11px;
+  }
+  
+
 #txt_container{
     display: flex;
     flex-direction: column-reverse;
-
-
 }
 /*iconos*/
 #txt_container img{
@@ -101,3 +114,21 @@
     border-left: 1px solid rgb(219, 207, 190);
 }
 
+/*Espacio de texto add*/
+#add_space{
+    padding: 6px;
+    border-radius: 5px;
+    background-color: #ccc;
+}
+
+#add_space input{
+    outline: none;
+    background: none;
+    border: 1px solid #968c8c;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+/* Estilo para el mensaje de límite cuando se supera */
+
+  
+/*Espacio de texto edit*/
