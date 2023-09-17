@@ -1,0 +1,44 @@
+#contenedor-head{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
+#head-title{
+    font-size: 6rem;
+}
+#head-phrase{
+    font-size: 2rem;
+}
+
+#contenedor-goals{
+    margin-left: 5%;
+    margin-right: 10% ;
+    margin-top: 1%;
+    background-color: antiquewhite;
+    width: 30cm; 
+    height: 11cm;  
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+}
+#contenedor-goals{
+    display: flex;
+    flex-direction: row;
+}
+#contenedor-goals #metas {
+    padding-left: 11.2cm;
+    padding-right: 11.2cm;
+
+}
+
+#contenedor-goals #opciones{
+    padding-left: 1cm;
+    padding-right: 1cm;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-left: 1px solid rgb(219, 207, 190);
+}
+
