@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente Virtual</title>
+    <link rel="stylesheet" href="EstilosChat.css">
+
+</head>
+<body>
+    <li>
+        <a href="index.html">Inicio</a>
+    </li>
+    <div class="chat-container" id="chat-container">
+        <div class="chat-message">¡Hola! Soy un chat automático con muchas habilidades&#x1F975;. ¿En qué puedo ayudarte?</div>
+    </div>
+    <input type="text" id="user-input" placeholder="Escribe tu mensaje..." onkeypress="enviarMensaje(event)">
+    <script>
+        function enviarMensaje(event) {
+            if (event.key === 'Enter') {
+                var userInput = document.getElementById('user-input');
+                var userMessage = userInput.value;
+                userInput.value = '';
+
+                var chatContainer = document.getElementById('chat-container');
+
+                var userMessageElement = document.createElement('div');
+                userMessageElement.classList.add('chat-message', 'user-message');
+                userMessageElement.textContent = userMessage;
+                chatContainer.appendChild(userMessageElement);
+
+                responder(userMessage);
+            }
+        }
+
+        function responder(userMessage) {
+            var respuestas = {
+                'hola': '¡Hola! ¿Cómo puedo ayudarte? :o',
+                'Hola': '¡Hola! ¿Cómo puedo ayudarte?',
+                'ola k ase': '¡Hola! ¿Cómo puedo ayudarte?',
+                'Ola k ase': '¡Hola! ¿Cómo puedo ayudarte?',
+                'hola bb': 'Hola hermoso',
+                'Hola bb': 'Hola hermoso',
+                'necesito ayuda': 'Puedo ayudarte con preguntas sobre diversos temas. Solo pregúntame.;)',
+                'Necesito ayuda': 'Puedo ayudarte con preguntas sobre diversos temas. Solo pregúntame.;)',
+                'ayuda': 'Puedo ayudarte con preguntas sobre diversos temas. Solo pregúntame.;)',
+                'dame ayuda': 'Puedo ayudarte con preguntas sobre diversos temas. Solo pregúntame.',
+                'Dame ayuda': 'Puedo ayudarte con preguntas sobre diversos temas. Solo pregúntame.',
+                'Ayudame': 'Puedo ayudarte con preguntas sobre diversos temas. Solo pregúntame.',
+                'ayudame': 'Puedo ayudarte con preguntas sobre diversos temas. Solo pregúntame.',
+                'ayuda por favor': 'Puedo ayudarte con preguntas sobre diversos temas. Solo pregúntame.',
+                'Ayuda por favor': 'Puedo ayudarte con preguntas sobre diversos temas. Solo pregúntame.',
+                'Que vale un curso': 'En este momento los cursos estan en desarrollo.',
+                'que vale un curso': 'En este momento los cursos estan en desarrollo.',
+                'Que cuesta un curso': 'En este momento los cursos estan en desarrollo.',
+                'que cuesta un curso': 'En este momento los cursos estan en desarrollo.',
+                'Cuanto vale un curso': 'En este momento los cursos estan en desarrollo.',
+                'Cuanto vale un curso': 'En este momento los cursos estan en desarrollo.',
+                'cuanto vale un curso': 'En este momento los cursos estan en desarrollo.',
+                'que valor tiene un curso': 'En este momento los cursos estan en desarrollo.',
+                'De que trata el proyecto': 'El proyecto esta enfocado, en que los estudiantes aprendan sus habilidades favoritas, de una manera mas entretenida y practica.',
+                'de que trata el proyecto': 'El proyecto esta enfocado, en que los estudiantes aprendan sus habilidades favoritas, de una manera mas entretenida y practica.',
+                'Que haces': 'Pensando en ti.',
+                'Que haces': 'Pensando en ti.',
+                'en consiste el proyecto': 'Puedes adquirir habilidades a TU propia manera de aprender.',
+                'En consiste el proyecto': 'Puedes adquirir habilidades a TU propia manera de aprender.',
+                'Eres humano': 'no rey.',
+                'eres humano': 'no.',
+                'Dan certificado del curso': 'Si, apenas cuando termines el curso completo, recibiras tu certificado :).',
+                'dan certificado del curso': 'Si, apenas cuando termines el curso completo, recibiras tu certificado :).',
+                'Cuanto duran los cursos': 'Aun no tenemos horarios claros, pero pronto estaran disponibles.',
+                'cuanto duran los cursos': 'Aun no tenemos horarios claros, pero pronto estaran disponibles.',
+                'cuanto dura el curso': 'Aun no tenemos horarios claros, pero pronto estaran disponibles.',
+                'Cuanto dura el curso': 'Aun no tenemos horarios claros, pero pronto estaran disponibles.',
+                'Cuanto tiempo dura el curso': 'Aun no tenemos horarios claros, pero pronto estaran disponibles.',
+                'cuanto tiempo dura el curso': 'Aun no tenemos horarios claros, pero pronto estaran disponibles.',
+                'Cual es el horario de los cursos': 'Aun no tenemos horarios claros, pero pronto estaran disponibles.',
+                'cual es el horario de los cursos': 'Aun no tenemos horarios claros, pero pronto estaran disponibles.',
+                'Como puedo hablar con un humano': 'Regresa al inicio, y en el circulo verde en la parte de abajo, podras hablar con alguien.',
+                'como puedo hablar con un humano': 'Regresa al inicio, y en el circulo verde en la parte de abajo, podras hablar con alguien.',
+                'Como hablo con un humano': 'Regresa al inicio, y en el circulo verde en la parte de abajo, podras hablar con alguien.',
+                'Cuantas personas integran el curso': 'Aun los usuarios se estan suscribiendo en los cursos :).',
+                'cuantas personas integran el curso': 'Aun los usuarios se estan suscribiendo en los cursos :).',
+                'como hablo con un humano': 'Regresa al inicio, y en el circulo verde en la parte de abajo, podras hablar con alguien.',
+                'adios': '¡Hasta luego! Si necesitas algo más, no dudes en preguntar.',
+                'Reciben tarjeta o efectivo': 'Tarjeta ;)',
+                'reciben tarjeta o efectivo': 'Tarjeta ;)',
+                'Hasta luego': '¡Hasta luego! Si necesitas algo más, no dudes en preguntar.',
+                'hasta luego': '¡Hasta luego! Si necesitas algo más, no dudes en preguntar.',
+                'Este proyecto va a terminar': 'Pronto vamos a finalizar con el desarrollo del proyecto.',
+                'gracias': '¡Hasta luego! Si necesitas algo más, no dudes en preguntar.',
+                'Gracias': '¡Hasta luego! Si necesitas algo más, no dudes en preguntar.',
+                'nombre': 'Mi nombre es Habilidoso. Soy un chat automático.',
+                'Nombre': 'Mi nombre es Habilidoso. Soy un chat automático.',
+                'hola bb': 'Hola hermoso',
+                'default': 'Lo siento, no entiendo esa pregunta. ¿Puedes reformularla?'
+               
+            };
+
+            var respuesta = respuestas[userMessage.toLowerCase()] || respuestas['default'];
+
+            var chatContainer = document.getElementById('chat-container');
+
+            var botMessageElement = document.createElement('div');
+            botMessageElement.classList.add('chat-message');
+            botMessageElement.textContent = respuesta;
+            chatContainer.appendChild(botMessageElement);
+        }
+    </script>
+</body>
+</html>
