@@ -12,6 +12,7 @@
 .cards-presentation .content{
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .cards-presentation .info{
@@ -28,3 +29,46 @@
   font-size: 25px;
 }
 
+.benefits{
+  width: 100%;
+  height: 390px;
+  margin-bottom: 40px;
+}
+.benefits .content{
+display: flex;
+flex-direction: row;
+background-color: rgb(32,28,28);
+border-radius: 15px;
+
+width: 100%;
+height: 100%;
+}
+
+
+.benefits h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  font-size: 50px;
+}
+
+.benefits .lista{
+  width: 100%;
+  height: 100%;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.benefits li{
+
+  list-style-type: disc;
+  list-style-position: outside;
+  list-style-color: red;
+  list-style-margin: 10px;
+  list-style-padding: 5px;
+
+  font-size: 30px;
+}
