@@ -1,0 +1,16 @@
+/*BILLAR*/
+.card-presentation{
+    width: 100%;
+    height: 350px;
+    margin-bottom: 40px;
+  }
+.card-presentation .content{
+  width: 40%;
+  padding: 90px 0 0 30px;
+  color: #fff;
+}
+.pres_billar .img{
+  width: 500px;
+  height: auto;
+  opacity: 100%;
+}

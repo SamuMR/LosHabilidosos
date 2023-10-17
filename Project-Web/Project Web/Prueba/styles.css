@@ -310,3 +310,12 @@ hr {
     text-align: center;
   }
 }
+
+.card{
+  display: block;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.card:hover{
+  transform: scale(1.1);
+}
