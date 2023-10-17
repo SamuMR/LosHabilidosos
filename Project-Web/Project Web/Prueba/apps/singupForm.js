@@ -1,3 +1,4 @@
+
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js"
 import { auth } from "./firebase.js"
 import { showMessage } from "./showMessage.js"
@@ -16,13 +17,6 @@ singupForm.addEventListener('submit',async (e) => {
         const modal = bootstrap.Modal.getInstance(sigupModal)
         modal.hide()
         showMessage("bienvenido " + userCredentials.user.email)
-
-      
-
-
-
-
-
 
     } catch (error) {
         console.log(error.message)
@@ -46,4 +40,4 @@ singupForm.addEventListener('submit',async (e) => {
 
     }
 
-})
+});

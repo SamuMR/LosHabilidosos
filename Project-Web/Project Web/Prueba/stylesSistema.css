@@ -1,0 +1,82 @@
+/* Estilos generales */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.diario-aprendizaje {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-centrado {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #007bff;
+  font-size: 28px;
+}
+
+.tablas-contenedor {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.formulario-tabla {
+  width: 220px;
+  margin-right: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.entrada-diario {
+  width: calc(100% - 30px);
+  height: 100px;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#calcular-puntos,
+#guardar-entrada {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  transition: background-color 0.3s ease;
+}
+
+#calcular-puntos:hover,
+#guardar-entrada:hover {
+  background-color: #0056b3;
+}
+
+#grafico-progreso,
+#grafico-lineas {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#entradas-anteriores {
+  font-style: italic;
+  color: #888;
+  font-size: 14px;
+}

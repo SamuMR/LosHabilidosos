@@ -26,7 +26,4 @@ signInForm.addEventListener("submit",async e=>{
             showMessage("demasiados intentos erroneos", "error")
         }
     }
-
-
-
 })

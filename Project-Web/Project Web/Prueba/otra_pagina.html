@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otra Página</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h2>Resultado de los Puntos</h2>
+    <div id="mensaje-puntos"></div>
+    <!-- Elemento canvas para la gráfica -->
+    <canvas id="grafico-lineas" width="400" height="200"></canvas>
+
+    <script>
+        // Obtener los valores de puntosSemana1, puntosSemana2, puntosSemana3 y puntosSemana4 de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const puntosSemana1 = parseFloat(urlParams.get('puntosSemana1')) || 0;
+        const puntosSemana2 = parseFloat(urlParams.get('puntosSemana2')) || 0;
+        const puntosSemana3 = parseFloat(urlParams.get('puntosSemana3')) || 0;
+        const puntosSemana4 = parseFloat(urlParams.get('puntosSemana4')) || 0;
+
+        // Crear una gráfica de líneas
+        const ctx = document.getElementById('grafico-lineas').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'],
+                datasets: [{
+                    label: 'Puntos',
+                    data: [puntosSemana1, puntosSemana2, puntosSemana3, puntosSemana4],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Calcula la media y clasifica al usuario
+        const totalPuntos = puntosSemana1 + puntosSemana2 + puntosSemana3 + puntosSemana4;
+        const mediaPuntos = totalPuntos / 4;
+
+        let experiencia = '';
+        let autorreflexion = '';
+        let clasificacion = '';
+
+        if (mediaPuntos >= 8) {
+            clasificacion = 'Usuario Avanzado';
+        } else if (mediaPuntos >= 5) {
+            clasificacion = 'Usuario Intermedio';
+        } else {
+            clasificacion = 'Usuario Principiante';
+        }
+
+        if (mediaPuntos >= 8) {
+            experiencia = 'Excelente';
+        } else if (mediaPuntos >= 5) {
+            experiencia = 'Buena';
+        } else {
+            experiencia = 'Limitada';
+        }
+
+        if (mediaPuntos >= 8) {
+            autorreflexion = 'Muy Profunda';
+        } else if (mediaPuntos >= 5) {
+            autorreflexion = 'Algo Profunda';
+        } else {
+            autorreflexion = 'Básica';
+        }
+
+        // Mostrar los resultados en la página
+        const mensaje = `Puntos por Semana:
+        Semana 1: ${puntosSemana1}
+        Semana 2: ${puntosSemana2}
+        Semana 3: ${puntosSemana3}
+        Semana 4: ${puntosSemana4}
+        Media de Puntos: ${mediaPuntos.toFixed(2)}
+        
+    Clasificación: ${clasificacion}
+    Experiencia: ${experiencia}
+    Autorreflexión: ${autorreflexion}`;
+
+        document.getElementById('mensaje-puntos').textContent = mensaje;
+    </script>
+</body>
+</html>
+

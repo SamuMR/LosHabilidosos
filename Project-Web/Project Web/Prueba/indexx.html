@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Diario de Aprendizaje</title>
+    <link rel="stylesheet" href="stylesSistema.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <section class="diario-aprendizaje">
+        <h2 class="titulo-centrado">Mi Diario de Aprendizaje</h2>
+
+        <!-- Contenedor para las tablas -->
+        <div class="tablas-contenedor">
+            <!-- Tabla para Experiencia -->
+            <table class="formulario-tabla">
+                <caption>Experiencia</caption>
+                <tr>
+                    <td><textarea class="entrada-diario" placeholder="Experiencia 1"></textarea></td>
+                </tr>
+                <tr>
+                    <td><textarea class="entrada-diario" placeholder="Experiencia 2"></textarea></td>
+                </tr>
+                <tr>
+                    <td><textarea class="entrada-diario" placeholder="Experiencia 3"></textarea></td>
+                </tr>
+                <tr>
+                    <td><textarea class="entrada-diario" placeholder="Experiencia 4"></textarea></td>
+                </tr>
+                <tr>
+                    <td><textarea class="entrada-diario" placeholder="Experiencia 5"></textarea></td>
+                </tr>
+            </table>
+
+            <!-- Tabla para Reflexión -->
+            <table class="formulario-tabla">
+                <caption>Reflexión</caption>
+                <tr>
+                    <td><textarea class="entrada-diario" placeholder="Reflexión 1"></textarea></td>
+                </tr>
+                <tr>
+                    <td><textarea class="entrada-diario" placeholder="Reflexión 2"></textarea></td>
+                </tr>
+                <tr>
+                    <td><textarea class="entrada-diario" placeholder="Reflexión 3"></textarea></td>
+                </tr>
+                <tr>
+                    <td><textarea class="entrada-diario" placeholder="Reflexión 4"></textarea></td>
+                </tr>
+                <tr>
+                    <td><textarea class="entrada-diario" placeholder="Reflexión 5"></textarea></td>
+                </tr>
+            </table>
+
+            <table class="formulario-tabla">
+                <caption>Puntos por Semana</caption>
+                <tr>
+                    <td><input type="number" class="entrada-diario" id="semana1" placeholder="Semana 1"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" class="entrada-diario" id="semana2" placeholder="Semana 2"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" class="entrada-diario" id="semana3" placeholder="Semana 3"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" class="entrada-diario" id="semana4" placeholder="Semana 4"></td>
+                </tr>
+            </table>
+            
+        </div>
+        <button type="button" id="calcular-puntos">Calcular Puntos</button>
+        <button type="button" id="guardar-entrada">Guardar</button>
+        <div id="entradas-anteriores">
+          <!-- Aquí se mostrarán las entradas anteriores -->
+        </div>
+
+        <!-- Elemento canvas para la gráfica -->
+        <canvas id="grafica-progreso" width="400" height="200"></canvas>
+    </section>
+    
+    <script src="script.js"></script> <!-- Asegúrate de incluir el archivo JavaScript -->
+</body>
+</html>
+
+
+
+
