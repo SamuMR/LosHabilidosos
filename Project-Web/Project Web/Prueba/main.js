@@ -4,6 +4,8 @@ import "./apps/singupForm.js";
 import "./apps/logout.js";
 import "./apps/signinForm.js";
 import "./apps/googleLogin.js";
+import "./apps/facebookLogin.js"
+import "./apps/githudLogin.js"
 import { loginCheck } from "./apps/loginCheck.js";
 
 onAuthStateChanged(auth, async (user) => {
