@@ -1,16 +1,30 @@
 /*BILLAR*/
-.card-presentation{
+.cards-presentation{
     width: 100%;
     height: 350px;
     margin-bottom: 40px;
   }
-.card-presentation .content{
-  width: 40%;
-  padding: 90px 0 0 30px;
-  color: #fff;
-}
-.pres_billar .img{
+.pres img{
   width: 500px;
   height: auto;
-  opacity: 100%;
 }
+
+.cards-presentation .content{
+  display: flex;
+  flex-direction: row;
+}
+
+.cards-presentation .info{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-left: 20px;
+}
+
+.cards-presentation h2{
+  font-size: 70px;
+}
+.cards-presentation p{
+  font-size: 25px;
+}
+
