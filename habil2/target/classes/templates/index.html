@@ -10,8 +10,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <!-- CUSTOM CSS -->
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="styles_cards.css">
+  <link th:href="@{/css/styles.css}" rel="stylesheet" />
 
   <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
   <script>
@@ -43,9 +42,6 @@
       <img src="img/brand.png" alt="TechNews Logo" class="nav-brand">
       <!-- Left Nav -->
       <ul class="nav-menu">
-        <li>
-          <a href="http://127.0.0.1:5500/index.html">Inicio</a>
-        </li>
         <li>
           <a href="#">Comunidad</a>
         </li>
@@ -83,43 +79,45 @@
     </nav>
     <hr>
 
-    <!-- Presentación-->
-    <section class="cards-presentation">
-      <div class="content pres">
-        <img src="img/cursos_img/billar_img1.jpg" alt=""/>
-        <div class="info">
-          <h2> Billar </h2>
-          <p>El billar a 3 bandas es un juego donde tienes que golpear con un taco una bola blanca para que toque a las otras dos bolas, pero antes de tocar la bola roja, la bola blanca tiene que tocar 3 bandas de la mesa. ¿Te suena difícil? ¡Pues sí! Es un juego de estrategia y precisión, y es muy divertido de jugar.
-            <br><br> ¿Te animas a probarlo?</p>
-        </div>
+    <!-- SHOWCASE -->
+    <header class="showcase">
+      <h2>Gran Apertura!</h2>
+      <p>Aun seguido batallando, pero siempre hay ganas</p>
+      <a href="#" class="btn">
+        Registrate! <i class="fas fa-chevron-right"></i>
+      </a>
+    </header>
+
+    <!-- NEWS CARDS -->
+    <div class="news-cards">
+      <div class="card" onclick="window.location.href='Crochet.html'">
+        <img src="img/IA1.png" alt="" />
+        <h3>Clases de Tejido crochet</h3>
+        <p>¿Te gustaría tejer? ¿Quieres aprender a crear prendas únicas y personalizadas? En nuestro curso aprenderás todo lo que necesitas saber para dominar esta técnica de tejido.</p>
+        <a href="#">Mas Informacion <i class="fas fa-angle-double-right"></i></a>
       </div>
 
-    </section>
-
-    <section class="benefits">
-      <div class="content">
-        <h2>¿Que te traerá de bueno?</h2>
-        <div class="lista">
-          <ul>
-            <li>Mejorarás la concentración y atención.</li>
-            <li>Encuentra un pasatiempo gratificante y hasta relajante</li>
-            <li>¡Podrás ganar apuestas presumiendo tus habilidades!</li>
-            <li>Tendrás horas de diversión y desafios sin fin.</li>
-          </ul>
-        </div>
+      <div class="card" onclick="window.location.href='Billar.html'">
+        <img src="img/IA2.png" alt="" />
+        <h3>Clases de billar</h3>
+        <p>¿Te gustaría convertirte en un profesional del billar 3 bandas? En nuestro curso aprenderás las técnicas y estrategias necesarias para dominar este emocionante juego.</p>
+        <a >Mas Informacion <i class="fas fa-angle-double-right"></i></a>
       </div>
-    </section>
 
-    <section class="btn_ingresar">
-      <div class="content">
-        <div class="borde">
-          <button>
-            <p>Quiero<br>unirme!</p>
-          </button>
-
-        </div>
+      <div class="card" onclick="window.location.href='Ejercicio.html'">
+        <img src="img/IA3.png" alt=""  >
+        <h3>Clases de ejercicio</h3>
+        <p>¿Quieres mejorar tu salud y tu condición física? En nuestro curso te enseñaremos a diseñar un plan de entrenamiento personalizado para alcanzar tus objetivos.</p>
+        <a href="#">Mas Informacion <i class="fas fa-angle-double-right"></i></a>
       </div>
-    </section>
+
+      <div class="card" onclick="window.location.href='Videojuegos.html'">
+        <img src="img/IA4.png" alt="" >
+        <h3>Clases de video juegos</h3>
+        <p>¿Quieres mejorar tus habilidades en los videojuegos? En nuestro curso aprenderás a dominar los controles, a desarrollar estrategias y a jugar de forma competitiva.</p>
+        <a href="#">Mas Informacion <i class="fas fa-angle-double-right"></i></a>
+      </div>
+    </div>
 
     <!-- Card Banner 1-->
     <section class="cards-banner-one">
@@ -131,7 +129,33 @@
       </div>
     </section>
 
-
+    <!-- NEWS CARDS -->
+    <div class="news-cards">
+      <div>
+        <img src="img/IA5.png" alt="" />
+        <h3>Distintas tecnicas de costura</h3>
+        <p>Descubre el arte relajante de tejer y crea tus propios accesorios y prendas únicas. Con agujas y lana, tejer te permite dar rienda suelta a tu creatividad y disfrutar de momentos de calma mientras creas algo hermoso con tus propias manos.</p>
+        <a href="#">Leer Mas <i class="fas fa-angle-double-right"></i></a>
+      </div>
+      <div>
+        <img src="img/IA6.png" alt="" />
+        <h3>Tipos de juegos de billar</h3>
+        <p>Sumérgete en el emocionante mundo del billar, un juego de precisión y estrategia. Aprender a jugar billar te brinda la oportunidad de desafiar a tus amigos, mejorar tus habilidades y disfrutar de la camaradería en un entorno relajado.</p>
+        <a href="#">Leer Mas <i class="fas fa-angle-double-right"></i></a>
+      </div>
+      <div>
+        <img src="img/IA7.png" alt="" />
+        <h3>Conoce mas juegos de mesa</h3>
+        <p>Abre la puerta a un mundo de diversión y estrategia con los juegos de mesa. Desde la negociación en Catan hasta la competencia en Scrabble, los juegos de mesa te permiten explorar nuevos mundos y fortalecer tus habilidades sociales mientras disfrutas de un tiempo de calidad con amigos y familiares.</p>
+        <a href="#">Leer Mas <i class="fas fa-angle-double-right"></i></a>
+      </div>
+      <div>
+        <img src="img/IA8.png" alt="" />
+        <h3>Sumergete en el mundo de los Videojuegos</h3>
+        <p>Adéntrate en aventuras épicas y desafíos emocionantes con los videojuegos. Ya sea que prefieras explorar mundos mágicos, competir en deportes virtuales o resolver enigmas intrigantes, los videojuegos ofrecen una experiencia única de entretenimiento y competencia.</p>
+        <a href="#">Leer Mas <i class="fas fa-angle-double-right"></i></a>
+      </div>
+    </div>
 
     <!-- third card -->
     <section class="cards-banner-two">
