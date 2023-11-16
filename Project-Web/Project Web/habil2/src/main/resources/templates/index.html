@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -10,7 +10,11 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <!-- CUSTOM CSS -->
-  <link th:href="@{/css/styles.css}" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+  <link th:href="@{./css/styles.css}" rel="stylesheet" />
+  <link th:href="@{./css/styles-cards.css}" rel="stylesheet" />
 
   <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
   <script>
@@ -21,14 +25,7 @@
       });
     });
   </script>
-
-
-
-
 </head>
-
-
-
 <body>
 
   <div class="menu-btn">
@@ -55,18 +52,15 @@
           <a href="#">Volverse Miembro [VIP]</a>
         </li>
         <li>
-          <a href="#">Perfil</a>
+          <a class="logged-out" href="#" data-bs-toggle="modal" data-bs-target="#singinModal">Iniciar Sesion</a>
         </li>
-          <li>
-            <a href="#">Iniciar Sesion</a>
-          </li>
-        <li>
-          <a href="#">Registrarse</a>
-        </li>
-        <li>
-          <a href="Metas/goals.html">Metas</a>
-        </li>
-      </ul>
+      <li>
+        <a class="logged-out" href="#" data-bs-toggle="modal" data-bs-target="#singupModal">Registrarse</a>
+      </li>
+      <li>
+        <a href="#"  class="logged-in" id="logout">Cerrar sesion</a>
+      </li>
+    </ul>
 
       <!-- Right Nav -->
       <ul class="nav-menu-right">
@@ -287,6 +281,34 @@
     </div>
   </div>
 
+ <!-- sigup Modal -->
+ <div class="modal fade" id="singupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Registro</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="singup-form">
+
+          <label for="email">Email:</label>
+          <input type="email" id="singup-email" class="form-control mb-3" placeholder="Email" required>
+          <label for="password">Contraseña:</label>
+          <input type="password" id="singup-password" class="form-control mb-3" placeholder="Contraseña" required> 
+          <button type="submit" class="btn btn-primary">
+            Registrarse
+          </button>
+
+        </form>
+
+       
+      </div>
+      
+    </div>
+  </div>
+</div>
+
   <!-- Footer -->
   <footer class="footer">
     <h3>Los Habilidosos</h3>
@@ -294,7 +316,7 @@
 
   <!-- Scroll Reveal -->
   <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="main.js"></script>
+  <script th:src="@{./js/main.js}"></script>
 </body>
 
 </html>
