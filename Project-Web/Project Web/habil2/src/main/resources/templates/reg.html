@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Usuario - Los Habilidosos</title>
+    <link rel="stylesheet" th:href="@{../css/styles_reg.css}">
+</head>
+<body>
+    <h1>Registro de Usuario - Los Habilidosos</h1>
+    <form th:action="@{/procesar_registro}" method="POST" th:novalidate="novalidate">
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" class="form-control" id="apellido" name="apellido" required>
+        </div>
+        <div class="form-group">
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" class="form-control" id="correo" name="correo" required>
+        </div>
+        <div class="form-group">
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" class="form-control" id="contrasena" name="contrasena" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Registrarse</button>
+    </form>
+
+    <div id="successPopup" class="alert alert-success" th:style="'display: none'">
+        <strong>¡Registro exitoso!</strong>
+    </div>
+    <script th:src="@{../js/reg.js}"></script>
+</body>
+</html>
