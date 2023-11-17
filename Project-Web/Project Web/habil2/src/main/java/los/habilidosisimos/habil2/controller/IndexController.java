@@ -1,4 +1,4 @@
-package los.habilidosisimos.habil2;
+package los.habilidosisimos.habil2.model;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
