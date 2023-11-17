@@ -17,9 +17,7 @@ public class UserController {
     UserService userService;
 
     //Registro
-
-    //Iniciar sesion
-    @GetMapping("/is")
+    @GetMapping("/reg.html")
     public String list(Model model){
 
         model.addAttribute("user", userService.listUser());
@@ -35,5 +33,7 @@ public class UserController {
         userService.saveUser(user);
         return("redirect:/index");
     }
+
+    //Iniciar sesion
 
 }
