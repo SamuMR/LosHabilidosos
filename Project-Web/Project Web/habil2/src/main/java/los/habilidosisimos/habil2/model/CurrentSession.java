@@ -12,16 +12,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "SesionActual")
+@Table(name = "Sesion_Actual")
 @Getter
 @Setter
 @NoArgsConstructor
-public class CurrentSession implements Serializable{
-    public CurrentSession (boolean session, String currentUser){
-        this.session = session;
-        this.currentUser = currentUser;
-
-    }
+public class CurrentSession implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -29,4 +24,9 @@ public class CurrentSession implements Serializable{
 
     private String currentUser;
     private boolean session;
+
+    public CurrentSession(String currentUser, boolean session) {
+        this.currentUser = currentUser;
+        this.session = session;
+    }
 }
