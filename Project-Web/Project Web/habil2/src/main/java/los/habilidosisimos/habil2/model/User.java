@@ -14,6 +14,7 @@ import java.io.Serializable;
 @Getter
 @Setter
 @NoArgsConstructor
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class User implements Serializable {
 
     public User( String nombre, String apellido, String correo, String password){

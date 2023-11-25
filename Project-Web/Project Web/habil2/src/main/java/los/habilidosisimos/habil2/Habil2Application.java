@@ -4,7 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import los.habilidosisimos.habil2.model.CurrentSession;
 import los.habilidosisimos.habil2.model.User;
+import los.habilidosisimos.habil2.repository.CurrentSessionRepository;
 import los.habilidosisimos.habil2.repository.UserRepository;
 
 
@@ -19,8 +21,9 @@ public class Habil2Application {
 		UserRepository userRepository = configurableApplicationContext.getBean(UserRepository.class);
 		User user = new User("Gustavo", "Cabrera", "aaa@gmail.com", "password");
 		userRepository.save(user);
-	}
 
-
-
+		CurrentSessionRepository csr = configurableApplicationContext.getBean(CurrentSessionRepository.class);
+		CurrentSession cs = new CurrentSession(false,"");
+		csr.save(cs);
+		}
 }
