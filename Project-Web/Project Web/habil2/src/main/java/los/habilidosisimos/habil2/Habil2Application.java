@@ -21,4 +21,6 @@ public class Habil2Application {
 		UserRepository userRepository = configurableApplicationContext.getBean(UserRepository.class);
 		User user = new User("Gustavo", "Cabrera", "aaa@gmail.com", "password");
 		userRepository.save(user);
+
+		
 }}		

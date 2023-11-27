@@ -1,32 +1,21 @@
 package los.habilidosisimos.habil2.model;
 
-import java.io.Serializable;
-
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "Sesion_Actual")
 @Getter
 @Setter
 @NoArgsConstructor
-public class CurrentSession implements Serializable {
+public class CurrentSession extends User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    public CurrentSession(boolean zession){
+        this.zession = zession;
 
-    private String currentUser;
-    private boolean session;
-
-    public CurrentSession(String currentUser, boolean session) {
-        this.currentUser = currentUser;
-        this.session = session;
     }
+
+    private boolean zession;
+//https://www.youtube.com/watch?v=_OCWLPAJh0Q
 }
