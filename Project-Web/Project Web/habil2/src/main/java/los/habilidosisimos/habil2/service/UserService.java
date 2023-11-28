@@ -14,8 +14,8 @@ public class UserService {
     UserRepository userRepository;
 
     public List<User> listUser(){return userRepository.findAll();}
-    public void saveUser(User user){userRepository.save(user);}
-    public User listById(Integer id){ return userRepository.findById(id.longValue()).get(); }
-    
+    public void saveUser(User user){userRepository.save(user);} //GUARDA UNO
+    public User listById(Integer id){ return userRepository.findById(id.longValue()).get(); } //BUSCA POR ID
+
 
 }

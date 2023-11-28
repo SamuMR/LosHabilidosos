@@ -23,15 +23,14 @@ public class UserController {
         model.addAttribute("user", userService.listUser());
         model.addAttribute("user",new User());
 
-        return "index";
+        return "reg";
     }
 
     @PostMapping("/save")
     public String save(User user, Model model){
-
         model.addAttribute("user", user);
         userService.saveUser(user);
-        return("redirect:/index");
+        return("redirect:/");
     }
 
     //Iniciar sesion
