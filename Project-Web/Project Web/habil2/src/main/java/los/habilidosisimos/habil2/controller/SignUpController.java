@@ -15,6 +15,8 @@ public class SignUpController {
     @Autowired
     private UserRepository userRepository;
 
+
+
     @GetMapping(path = "/signup")
     public String GetSignupPage(){
         return "signup";
@@ -31,4 +33,6 @@ public class SignUpController {
         userRepository.save(usuario);
         return "index";
     }
+
+
 }

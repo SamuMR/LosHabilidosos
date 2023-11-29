@@ -5,13 +5,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 //import org.springframework.context.ConfigurableApplicationContext;
 
 
-
 @SpringBootApplication
 public class Habil2Application {
 
 	public static void main(String[] args) {	
-		//ConfigurableApplicationContext configurableApplicationContext = SpringApplication.run(Habil2Application.class, args);
-
-		SpringApplication.run(Habil2Application.class, args);
 		
-}}		
+		SpringApplication.run(Habil2Application.class, args);
+		}
+	
+	}		

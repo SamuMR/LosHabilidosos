@@ -54,7 +54,7 @@
         <a class="logged-out" onclick="window.location.href='signup'">Registrarse</a>
       </li>
       <li>
-        <a class="logged-in">Cerrar Sesion</a>
+        <a href="#" th:if="${sesion.InSesion != null}">Cerrar sesión</a>
       </li>
       <li>
         <a class="logged-out" onclick="window.location.href='signin'">Iniciar Sesion</a>
