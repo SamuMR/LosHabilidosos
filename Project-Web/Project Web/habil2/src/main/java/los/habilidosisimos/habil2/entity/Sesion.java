@@ -16,6 +16,11 @@ public class Sesion {
 
     public Sesion(){}
 
+    public Sesion(String usuarioActual, boolean inSesion){
+        this.UsuarioActual = usuarioActual;
+        this.InSesion = inSesion;
+    }
+
     public Sesion(Long id, String usuarioActual, boolean inSesion) {
         super();
         Id = id;
