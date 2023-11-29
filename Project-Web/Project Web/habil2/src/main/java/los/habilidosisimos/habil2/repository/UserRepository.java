@@ -2,12 +2,9 @@ package los.habilidosisimos.habil2.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import los.habilidosisimos.habil2.entity.Usuario;
 
-import los.habilidosisimos.habil2.model.User;
-
-
-
-public interface UserRepository extends JpaRepository<User, Long> {
-    User findByEmail(String email);
+public interface UserRepository extends JpaRepository<Usuario, Long>{
+    Usuario findByCorreoId(String correoId);
+    
 }
-
