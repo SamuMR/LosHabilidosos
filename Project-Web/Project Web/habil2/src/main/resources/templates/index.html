@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="https://www.thymeleaf.org">
 
 <head>
   <meta charset="UTF-8">
@@ -54,7 +54,9 @@
         <a class="logged-out" onclick="window.location.href='signup'">Registrarse</a>
       </li>
       <li>
-        <a href="#" >Cerrar sesión</a>
+        <div th:unless="${sesion.inSesion}">
+          <a class="logged-out" onclick="window.location.href='signup'">Cerrar sesion</a> 
+        </div>
       </li>
       <li>
         <a class="logged-out" onclick="window.location.href='signin'">Iniciar Sesion</a>
