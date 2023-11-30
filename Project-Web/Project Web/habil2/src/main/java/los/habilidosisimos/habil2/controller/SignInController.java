@@ -23,6 +23,7 @@ public class SignInController {
 
     
     Sesion sesion = new Sesion();
+    SesionController sc = new SesionController();
 
     @PostMapping(path = "/signin")
     public String SubmitSignin(Model model, UsuarioSignin usuarioSignin) {
@@ -37,7 +38,8 @@ public class SignInController {
         if (usuario.getPassword().equals(usuarioSignin.getPassword())) {
             sesion.setUsuarioActual(usuario.getCorreoId());
             sesion.setInSesion(true);
-            return "redirect:/sesionIniciada";
+            sc.sesionActual(true);
+            return "indexsession";
         } else {
             // Contraseña incorrecta, devolver error
             return "error";
