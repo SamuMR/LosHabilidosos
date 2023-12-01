@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link th:href="@{./css/signin.css}" rel="stylesheet" />
 </head>
 <body>
-  <form th:action="@{/signup}" th:object="${signupForm}" method="post">
+  <form th:action="@{/signup}" th:object="${signupForm}" method="post" class="formulario">
   <p>Nombre <input type="text" name="nombre"></p>
   <p>Apellido <input type="text" name="apellido"></p>
   <p>Correo <input type="email" name="correoId"></p>

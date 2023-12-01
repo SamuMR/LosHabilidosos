@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #3a0000; /* Vinotinto oscuro */
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    overflow: hidden;
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Negro semi-transparente */
+    border-radius: 10px;
+    padding: 20px;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+form input {
+    width: 100%;
+    background: none;
+    color: #fff; /* Texto blanco */
+    padding-top: 10px;
+    border: none;
+    outline: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #2ecece; /* Línea inferior de color vino tinto */
+    transition: border-bottom 0.3s ease-in-out;
+}
+
+form input:focus {
+    animation: moveUp 0.5s ease-in-out;
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-5px);
+    }
+}
+
+form input[type="submit"] {
+    background-color: #000000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+    background-color: #8b0000; /* Color más claro al pasar el ratón sobre el botón */
+}

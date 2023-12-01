@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link th:href="@{./css/signin.css}" rel="stylesheet" />
+   
 </head>
-<body>
-    <form th:action="@{/signin}" th:object="${signinForm}" method="post">
-    <p>Correo <input type="email" name="correoId"></p>
-    <p>Contraseña <input type="password" name="password"></p>
-    <p> <input type="submit" value="Sign In"></p>
+<body class="cuerpo">
+
+    <form th:action="@{/signin}" th:object="${signinForm}" method="post" class="formulario">
+    <p>Correo <input type="email" name="correoId" class="correo"></p>
+
+    <p>Contraseña <input type="password" name="password" class="contra"></p>
+
+    <p> <input type="submit" value="Sign In" class="registro"></p>
     </form>
 </body>
 </html>
