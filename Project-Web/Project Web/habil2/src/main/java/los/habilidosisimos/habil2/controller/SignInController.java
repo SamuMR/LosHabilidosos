@@ -15,7 +15,9 @@ import los.habilidosisimos.habil2.repository.UserRepository;
 public class SignInController {
     @Autowired
     private UserRepository userRepository;
-    @Autowired
+    
+
+
     @GetMapping(path = "/signin")
     public String GetSigninPage(){
         return "signin";
@@ -23,7 +25,6 @@ public class SignInController {
 
     
     Sesion sesion = new Sesion();
-    SesionController sc = new SesionController();
 
     @PostMapping(path = "/signin")
     public String SubmitSignin(Model model, UsuarioSignin usuarioSignin) {
@@ -38,7 +39,6 @@ public class SignInController {
         if (usuario.getPassword().equals(usuarioSignin.getPassword())) {
             sesion.setUsuarioActual(usuario.getCorreoId());
             sesion.setInSesion(true);
-            sc.sesionActual(true);
             return "indexsession";
         } else {
             // Contraseña incorrecta, devolver error
