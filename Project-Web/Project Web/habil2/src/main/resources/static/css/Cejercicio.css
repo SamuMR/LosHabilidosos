@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-image: url(img/ejercicio2.png);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+section {
+    margin: 20px;
+}
+
+h2 {
+    color: #000000;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.fotos img {
+    width: 50%; 
+    max-width: 30%;
+    display: block;
+    margin: 0 auto; 
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.Video {
+    text-align: center; 
+}
+
+.Video video {
+    max-width: 100%;
+    display: inline-block; 
+}
+
+.Adentrate {
+    text-align: center; 
+}

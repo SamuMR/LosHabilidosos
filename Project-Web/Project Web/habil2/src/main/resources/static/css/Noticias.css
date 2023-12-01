@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('img/fondo-escrutorio-de-la-noche-de-van-gogh-upscaled.png'); 
+    background-size: cover;
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section.noticia {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+section.noticia h2 {
+    font-size: 24px;
+}
+
+section.noticia img {
+    width: 50%; 
+    max-width: 30%;
+    display: block;
+    margin: 0 auto; 
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}

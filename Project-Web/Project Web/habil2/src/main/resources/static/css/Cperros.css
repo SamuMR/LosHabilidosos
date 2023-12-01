@@ -1,0 +1,100 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Estilos para las secciones */
+section h2 {
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+section p,
+footer p {
+    line-height: 1.6;
+}
+
+section ol,
+section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section li {
+    margin-bottom: 10px;
+}
+
+/* Estilos para el footer */
+footer ul {
+    padding-left: 0;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+
+footer ul li:last-child {
+    margin-bottom: 0;
+}
+
+footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Estilos para el botón de pago */
+.btn-pago {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-pago:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para centrar el iframe */
+iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+

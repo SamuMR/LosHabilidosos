@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LosHabilidosos</title>
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+  <link th:href="@{./css/styles.css}" rel="stylesheet" />
+  <link th:href="@{./css/styles-cards.css}" rel="stylesheet" />
+
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(function(OneSignal) {
+      OneSignal.init({
+        appId: "e5423f94-1fec-4c35-b1c7-6bcf6fb6cfaa",
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+  </div>
+
+  <div class="container">
+    <!-- Navigation -->
+    <nav class="nav-main">
+      <!-- Brand -->
+      <img src="img/brand.png" alt="TechNews Logo" class="nav-brand">
+      <!-- Left Nav -->
+      <ul class="nav-menu">
+        <li>
+          <a href="#">Comunidad</a>
+        </li>
+        <li>
+          <a href="#">Diario Aprendizaje</a>
+        </li>
+        <li>
+          <a href="#">Metas Aprendizaje</a>
+        </li>
+
+        <li>
+          <a href="Chatbot.html">Asistencia Virtual</a>
+        </li>
+
+      <li>
+        <a class="logged-out" onclick="window.location.href='signout'">Cerrar sesion</a>
+      </li>
+    </ul>
+
+      <!-- Right Nav -->
+      <ul class="nav-menu-right">
+        <li>
+          <a href="#">
+            <i class="fas fa-search"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <hr>
+
+    <!-- SHOWCASE -->
+    <header class="showcase">
+      <p>${sesionController.nombre}</p>
+      <p>Aun seguido batallando, pero siempre hay ganas</p>
+      <a href="#" class="btn">
+        Registrate! <i class="fas fa-chevron-right"></i>
+      </a>
+    </header>
+
+    <!-- NEWS CARDS -->
+    <div class="news-cards">
+      <div class="card" onclick="window.location.href='Crochet.html'">
+        <img src="img/IA1.png" alt="" />
+        <h3>Clases de Tejido crochet</h3>
+        <p>¿Te gustaría tejer? ¿Quieres aprender a crear prendas únicas y personalizadas? En nuestro curso aprenderás todo lo que necesitas saber para dominar esta técnica de tejido.</p>
+        <a href="#">Mas Informacion <i class="fas fa-angle-double-right"></i></a>
+      </div>
+
+      <div class="card" onclick="window.location.href='Billar.html'">
+        <img src="img/IA2.png" alt="" />
+        <h3>Clases de billar</h3>
+        <p>¿Te gustaría convertirte en un profesional del billar 3 bandas? En nuestro curso aprenderás las técnicas y estrategias necesarias para dominar este emocionante juego.</p>
+        <a >Mas Informacion <i class="fas fa-angle-double-right"></i></a>
+      </div>
+
+      <div class="card" onclick="window.location.href='Ejercicio.html'">
+        <img src="img/IA3.png" alt=""  >
+        <h3>Clases de ejercicio</h3>
+        <p>¿Quieres mejorar tu salud y tu condición física? En nuestro curso te enseñaremos a diseñar un plan de entrenamiento personalizado para alcanzar tus objetivos.</p>
+        <a href="#">Mas Informacion <i class="fas fa-angle-double-right"></i></a>
+      </div>
+
+      <div class="card" onclick="window.location.href='Videojuegos.html'">
+        <img src="img/IA4.png" alt="" >
+        <h3>Clases de video juegos</h3>
+        <p>¿Quieres mejorar tus habilidades en los videojuegos? En nuestro curso aprenderás a dominar los controles, a desarrollar estrategias y a jugar de forma competitiva.</p>
+        <a href="#">Mas Informacion <i class="fas fa-angle-double-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Card Banner 1-->
+    <section class="cards-banner-one">
+      <div class="content">
+        <h2>Noticias Relevantes</h2>
+        <!-- lorem 20 -->
+        <p>Esta seccion contendra una serie de 'posts' de noticias de interes con referencia a los cursos que estamos ofreciendo o las actividades que se realizaran o bien noticias en general que sean relevantes!</p>
+        <a href="#" class="btn">PROXIMAMENTE<i class="fas fa-chevron-right"></i></a>
+      </div>
+    </section>
+
+    <!-- NEWS CARDS -->
+    <div class="news-cards">
+      <div>
+        <img src="img/IA5.png" alt="" />
+        <h3>Distintas tecnicas de costura</h3>
+        <p>Descubre el arte relajante de tejer y crea tus propios accesorios y prendas únicas. Con agujas y lana, tejer te permite dar rienda suelta a tu creatividad y disfrutar de momentos de calma mientras creas algo hermoso con tus propias manos.</p>
+        <a href="#">Leer Mas <i class="fas fa-angle-double-right"></i></a>
+      </div>
+      <div>
+        <img src="img/IA6.png" alt="" />
+        <h3>Tipos de juegos de billar</h3>
+        <p>Sumérgete en el emocionante mundo del billar, un juego de precisión y estrategia. Aprender a jugar billar te brinda la oportunidad de desafiar a tus amigos, mejorar tus habilidades y disfrutar de la camaradería en un entorno relajado.</p>
+        <a href="#">Leer Mas <i class="fas fa-angle-double-right"></i></a>
+      </div>
+      <div>
+        <img src="img/IA7.png" alt="" />
+        <h3>Conoce mas juegos de mesa</h3>
+        <p>Abre la puerta a un mundo de diversión y estrategia con los juegos de mesa. Desde la negociación en Catan hasta la competencia en Scrabble, los juegos de mesa te permiten explorar nuevos mundos y fortalecer tus habilidades sociales mientras disfrutas de un tiempo de calidad con amigos y familiares.</p>
+        <a href="#">Leer Mas <i class="fas fa-angle-double-right"></i></a>
+      </div>
+      <div>
+        <img src="img/IA8.png" alt="" />
+        <h3>Sumergete en el mundo de los Videojuegos</h3>
+        <p>Adéntrate en aventuras épicas y desafíos emocionantes con los videojuegos. Ya sea que prefieras explorar mundos mágicos, competir en deportes virtuales o resolver enigmas intrigantes, los videojuegos ofrecen una experiencia única de entretenimiento y competencia.</p>
+        <a href="#">Leer Mas <i class="fas fa-angle-double-right"></i></a>
+      </div>
+    </div>
+
+    <!-- third card -->
+    <section class="cards-banner-two">
+      <div class="content">
+        <h2>Espacio Publicitario</h2>
+        <!-- lorem 30 -->
+        <p>Publicitar cursos.</p>
+        <a href="#" class="btn">Leer Mas <i class="fas fa-chevron-right"></i></a>
+      </div>
+    </section>
+
+    <!-- Follow -->
+    <section class="social">
+      <p>Redes Sociales (Inactivas)</p>
+      <div class="links">
+        <a href="https://facebook.com">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://linkdin.com">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer Links -->
+  <div class="footer-links">
+    <div class="footer-container">
+      <ul>
+        <li>
+          <a href="#">
+            <h3>Ing Software Grupo</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#">Cristian Reinales</a>
+        </li>
+        <li>
+          <a href="#">Samuel Medina</a>
+        </li>
+        <li>
+          <a href="#">David Beltrán</a>
+        </li>
+        <li>
+          <a href="#">Gustavo Cabreriña</a>
+        </li>
+        <li>
+          <a href="#">Bryan Ariza</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="#">
+            <h3>Title Two</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#">Blockchain</a>
+        </li>
+        <li>
+          <a href="#">Machine Learning</a>
+        </li>
+        <li>
+          <a href="#">Artificial Intelligence</a>
+        </li>
+        <li>
+          <a href="#">Quantum Computing</a>
+        </li>
+        <li>
+          <a href="#">Startup</a>
+        </li>
+        <li>
+          <a href="#">Cryptocurrencies</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="#">
+            <h3>Title Three</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#">Blockchain</a>
+        </li>
+        <li>
+          <a href="#">Machine Learning</a>
+        </li>
+        <li>
+          <a href="#">Artificial Intelligence</a>
+        </li>
+        <li>
+          <a href="#">Quantum Computing</a>
+        </li>
+        <li>
+          <a href="#">Startup</a>
+        </li>
+        <li>
+          <a href="#">Cryptocurrencies</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="#">
+            <h3>Title Four</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#">Blockchain</a>
+        </li>
+        <li>
+          <a href="#">Machine Learning</a>
+        </li>
+        <li>
+          <a href="#">Artificial Intelligence</a>
+        </li>
+        <li>
+          <a href="#">Quantum Computing</a>
+        </li>
+        <li>
+          <a href="#">Startup</a>
+        </li>
+        <li>
+          <a href="#">Cryptocurrencies</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+ <!-- sigup Modal -->
+ <div class="modal fade" id="singupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Registro</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="singup-form">
+
+          <label for="email">Email:</label>
+          <input type="email" id="singup-email" class="form-control mb-3" placeholder="Email" required>
+          <label for="password">Contraseña:</label>
+          <input type="password" id="singup-password" class="form-control mb-3" placeholder="Contraseña" required> 
+          <button type="submit" class="btn btn-primary">
+            Registrarse
+          </button>
+
+        </form>
+
+       
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <h3>Los Habilidosos</h3>
+  </footer>
+
+  <!-- Scroll Reveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script th:src="@{./js/main.js}"></script>
+</body>
+
+</html>
