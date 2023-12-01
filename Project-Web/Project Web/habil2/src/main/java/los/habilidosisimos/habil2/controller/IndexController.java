@@ -14,9 +14,14 @@ public class IndexController {
         return "index";
     }
 
-    @GetMapping("/videojuegos")
+    @GetMapping("/Videojuegos.html")
     public String videojogos(){
-        return "videojogos";
+        return "Videojogos.html";
+    }
+
+    @GetMapping("/Cperros.html")
+    public String videoperros(){
+        return "Cperros.html";
     }
     @GetMapping("/Crochet.html")
     public String crochet(){
